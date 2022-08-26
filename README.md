@@ -31,3 +31,11 @@ func main() {
 	api.Run(":5000")
 }
 ```
+
+To send an authed request, use [hmacgen](https://github.com/rubiojr/hmacgen) and add `Request-Hmac` header to the request:
+
+```
+export HMAC_KEY=$(HMAC_KEY=deadbeef hmacgen)
+
+curl -X GET -H "Request-HMAC: $HMAC_KEY" localhost:5000/admin/hello
+```
