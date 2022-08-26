@@ -1,5 +1,5 @@
 # Gin Web Framework Middlewares
 
-## HMAC Auth
+## hmacauth
 
-Server-to-server HMAC based auth.
+HMAC based auth middleware.
